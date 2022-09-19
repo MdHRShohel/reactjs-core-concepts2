@@ -1,6 +1,37 @@
 //import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
+function App() {  
+
+  return (
+    <div className="App">
+      {
+       <Counter></Counter>
+      }
+    </div>
+  );
+}
+
+function Counter(){
+  const [Count,setCount] = useState(0);
+  const incraseCount = () => {
+    const newCount = Count + 1;
+    setCount(newCount);
+  }
+
+  return(
+    <div>
+      <h1>Count: {Count} </h1>
+      <button onClick={incraseCount}>Increase</button>
+    </div>
+  )
+}
+
+export default App;
+
+
+/*
 function App() {
   const products = [
     {name: 'Photoshop', price: '$90.99'},
@@ -15,10 +46,8 @@ function App() {
   return (
     <div className="App">
       {
-        products.map(product => <Product name = {product.name} price ={product.price}></Product>)}
-      {/* <Product name="Laptop" price = '47000'></Product>
-      <Product name="IPhone" price = "120000"></Product>
-      <Product name="Watch" price = "3500"></Product> */}
+        products.map(product => <Product name = {product.name} price ={product.price}></Product>)
+      }
     </div>
   );
 }
@@ -32,4 +61,6 @@ function Product(props){
   )
 }
 
-export default App;
+*/
+
+
