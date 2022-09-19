@@ -15,10 +15,7 @@ function App() {
 
 function Counter(){
   const [Count,setCount] = useState(0);
-  const incraseCount = () => {
-    const newCount = Count + 1;
-    setCount(newCount);
-  }
+  const incraseCount = () => setCount(Count + 1);
 
   return(
     <div>
