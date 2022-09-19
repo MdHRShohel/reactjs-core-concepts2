@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       {
-        products.map(product => <Product name = {product.name}></Product>)}
+        products.map(product => <Product name = {product.name} price ={product.price}></Product>)}
       {/* <Product name="Laptop" price = '47000'></Product>
       <Product name="IPhone" price = "120000"></Product>
       <Product name="Watch" price = "3500"></Product> */}
