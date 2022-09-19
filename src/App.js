@@ -16,11 +16,13 @@ function App() {
 function Counter(){
   const [Count,setCount] = useState(0);
   const incraseCount = () => setCount(Count + 1);
+  const DecraseCount = () => setCount(Count - 1);
 
   return(
     <div>
       <h1>Count: {Count} </h1>
       <button onClick={incraseCount}>Increase</button>
+      <button onClick={DecraseCount}>Decrease</button>
     </div>
   )
 }
